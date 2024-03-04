@@ -12,9 +12,9 @@ const ContextProvider = ({ children }) => {
     const [Data, setData] = useState([])
 
     const Request = async (path, params) => {
-        try{
+        try {
             path = urlAPI + path;
-            
+
             return await axios(path, params)
         } catch (error) {
             console.error(error?.message);
@@ -45,4 +45,5 @@ const ContextProvider = ({ children }) => {
         </Context.Provider>
     )
 }
-export { ContextProvider, Context }
+
+export { Context, ContextProvider }

@@ -4,11 +4,8 @@
       "id": 1,
       "image": "/assets/images/product3-0.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "brown",
-        "green-secondary"
-      ],
-      "price": 24,
+      "colors": ["brown", "green-secondary"],
+      "price": 50,
       "sizes": [
         {
           "value": "50 X 40",
@@ -21,17 +18,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Man",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Bedroom",
+        "quality": "Premium Quality",
+        "gender": "Man"
+      }
     },
     {
       "id": 2,
       "image": "/assets/images/product2.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "grey"
-      ],
+      "colors": ["grey"],
       "price": 24,
       "sizes": [
         {
@@ -45,17 +44,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Woman",
       "top": false,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Other",
+        "quality": "Conscious",
+        "gender": "Woman"
+      }
     },
     {
       "id": 3,
       "image": "/assets/images/product1.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "orange"
-      ],
+      "colors": ["orange"],
       "price": 24,
       "sizes": [
         {
@@ -69,17 +70,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Man",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Other",
+        "quality": "Conscious",
+        "gender": "Woman"
+      }
     },
     {
       "id": 4,
       "image": "/assets/images/product4.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "grey"
-      ],
+      "colors": ["grey"],
       "price": 24,
       "sizes": [
         {
@@ -93,17 +96,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Woman",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Conscious",
+        "gender": "Man"
+      }
     },
     {
       "id": 5,
       "image": "/assets/images/product5.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "yellow", "grey"
-      ],
+      "colors": ["yellow", "grey"],
       "price": 24,
       "sizes": [
         {
@@ -117,17 +122,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Man",
       "top": false,
-      "quantity":      1
+      "quantity": 1,
+      "category": {
+        "room": "Other",
+        "quality": "Classic Collection",
+        "gender": "Man"
+      }
     },
     {
       "id": 6,
       "image": "/assets/images/product6.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "lightbrown"
-      ],
+      "colors": ["lightbrown"],
       "price": 24,
       "sizes": [
         {
@@ -141,18 +148,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Man",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Child Room",
+        "quality": "Classic Collection",
+        "gender": "Man"
+      }
     },
     {
       "id": 7,
       "image": "/assets/images/product7.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "brown",
-        "lightbrown"
-      ],
+      "colors": ["brown", "lightbrown"],
       "price": 24,
       "sizes": [
         {
@@ -166,17 +174,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Woman",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Conscious",
+        "gender": "Woman"
+      }
     },
     {
       "id": 8,
       "image": "/assets/images/product8.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "grey"
-      ],
+      "colors": ["grey"],
       "price": 24,
       "sizes": [
         {
@@ -190,17 +200,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Woman",
-      "top": false,
-      "quantity": 1
+      "top": true,
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Classic Collection",
+        "gender": "Woman"
+      }
     },
     {
       "id": 9,
       "image": "/assets/images/product9.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "pink", "lightgreen", "grey"
-      ],
+      "colors": ["pink", "green-secondary", "grey"],
       "price": 24,
       "sizes": [
         {
@@ -214,17 +226,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Man",
       "top": false,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Classic Collection",
+        "gender": "Woman"
+      }
     },
     {
       "id": 10,
       "image": "/assets/images/product10.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "brown", "grey"
-      ],
+      "colors": ["brown", "grey"],
       "price": 24,
       "sizes": [
         {
@@ -238,17 +252,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Woman",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Bathroom",
+        "quality": "Classic Collection",
+        "gender": "Woman"
+      }
     },
     {
       "id": 11,
       "image": "/assets/images/product11.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "march", "grey", "lightbrown"
-      ],
+      "colors": ["march", "grey", "lightbrown"],
       "price": 24,
       "sizes": [
         {
@@ -262,17 +278,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 5,
-      "gender": "Woman",
       "top": false,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Classic Collection",
+        "gender": "Man"
+      }
     },
     {
       "id": 12,
       "image": "/assets/images/product12.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "lightbrown", "march", "grey"
-      ],
+      "colors": ["lightbrown", "march", "grey"],
       "price": 24,
       "sizes": [
         {
@@ -286,18 +304,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Man",
       "top": false,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Bedroom",
+        "quality": "Premium Quality",
+        "gender": "Man"
+      }
     },
     {
       "id": 13,
       "image": "/assets/images/product13.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "brown",
-        "green-secondary"
-      ],
+      "colors": ["brown", "green-secondary"],
       "price": 24,
       "sizes": [
         {
@@ -311,17 +330,19 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 2,
-      "gender": "Woman",
       "top": true,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Classic Collection",
+        "gender": "Woman"
+      }
     },
     {
       "id": 14,
       "image": "/assets/images/product15.png",
       "title": "Checked Duvet Cover Set",
-      "colors": [
-        "brown"
-      ],
+      "colors": ["brown"],
       "price": 24,
       "sizes": [
         {
@@ -335,9 +356,13 @@
       ],
       "description": "Light khaki green/white checks",
       "stars": 4,
-      "gender": "Woman",
       "top": false,
-      "quantity": 1
+      "quantity": 1,
+      "category": {
+        "room": "Living Room",
+        "quality": "Classic Collection",
+        "gender": "Woman"
+      }
     }
   ],
   "blogs": [

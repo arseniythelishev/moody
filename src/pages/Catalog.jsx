@@ -1,4 +1,4 @@
-import {Fragment} from "react";
+import {Fragment, useEffect, useContext, useState} from "react";
 import Breadcrumb from "../components/Breadcrumb";
 import Container from "../components/container";
 import {Button, Checkbox, Flex, Typography} from "antd";
@@ -7,8 +7,52 @@ import {FiFilter} from "react-icons/fi";
 import Cart from "../components/Cart";
 import Product1 from "../images/product1.png";
 import {default as Btn} from "../components/Button";
+import { Context } from "../Context"
 
 const Catalog = () => {
+    const { Data } = useContext(Context);
+
+    const [DataProducts, setDataProducts] = useState([])
+    const [SliceDataProducts, setSliceDataProducts] = useState(6);
+
+    const handleLoad = () => {
+        if(SliceDataProducts > (DataProducts.length - 1)){
+            setSliceDataProducts(6)
+        }else{
+            setSliceDataProducts(prev => prev + 6)
+        }
+    }
+
+    const handleRoom = (e) => {
+        const value = e.target.dataset.byRoom?.toLowerCase();
+        
+        const data = Data?.filter(product => product?.category?.room?.toLowerCase() === value) 
+
+        setDataProducts([...data])
+    }
+
+    useEffect(() => {
+        setDataProducts([...Data]);
+
+    }, [Data.length]);
+
+    const product = DataProducts?.slice(0, SliceDataProducts)
+        .map(product => {
+            return(
+                <Fragment key={product.id}>
+                    <Cart 
+                        href={`/catalog/product/${product.id}`} 
+                        type={"product"} 
+                        vertical
+                        image={product.image}
+                        title={product.image} 
+                        colors={product.colors} 
+                        price={product.price} 
+                    />
+                </Fragment>
+            )
+        })
+
   return(
       <Fragment>
           <Breadcrumb />
@@ -49,7 +93,7 @@ const Catalog = () => {
 
                               <ul className={`list-none Products__aside-list`}>
                                   <li className={"active"}>
-                                      <Title bodyText={'p'} className={`Products__aside-text`}>Bedroom</Title>
+                                      <Title data-by-room={"Bedroom"} onClick={handleRoom} bodyText={'p'} className={`Products__aside-text`}>Bedroom</Title>
                                   </li>
 
                                   <li>
@@ -205,22 +249,11 @@ const Catalog = () => {
                           </Flex>
 
                           <Flex gap={24} wrap={"wrap"}>
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
-                              <Cart href={"#"} type={"product"} vertical image={Product1} title={"Velvet Covvered"} colors={["white", "black"]} price={30} />
+                              {product}
                           </Flex>
 
                           <div className="Products__buttons">
-                              <Btn primary>load more products</Btn>
+                              <Btn primary onClick={handleLoad}>load more products</Btn>
                           </div>
                       </article>
                   </Flex>
