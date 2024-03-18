@@ -22,17 +22,17 @@ const Home = () => {
     const { Data } = useContext(Context);
 
     const [TopRatings, setTopRatings] = useState([])
-    const [SliceRating, setSliceRating] = useState(9);
+    const [SliceRating, setSliceRating] = useState(6);
 
     const handleLoad = () => {
-        if(SliceRating > (TopRatings.length - 1)){
+        if (SliceRating > (TopRatings.length - 1)) {
             setSliceRating(6)
-        }else{
+        } else {
             setSliceRating(prev => prev + 6)
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         const data = Data?.filter(item => item.top);
         setTopRatings(() => data && data?.length ? data : []);
     }, [TopRatings.length, Data.length])
@@ -192,7 +192,7 @@ const Home = () => {
                 <Container>
                     <Typography.Title level={2} className={`Top-rating__title`}>TOP RATING</Typography.Title>
                     <Flex gap={25} wrap={"wrap"} align={"center"} className={"Top-rating__row"}>
-                        { topProduct }
+                        {topProduct}
                     </Flex>
 
                     <div className="Top-rating__buttons">
